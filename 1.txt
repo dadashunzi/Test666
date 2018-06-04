@@ -3,3 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+//CSS  
+    <style >
+    body{padding:0;margin:0;font-size:12px;font-weight:700;}
+  input{border:0;background:#002DBF;color:#fff;font-weight:700;font-family:"黑体";fason:expression(this.readOnly=true)}
+  .box{color:#fff;background:#333;padding:5px;width:210px;height:270px;border:1px solid #ccc;margin:0 auto;margin-top:10px;text-align:center;}
+  .box div{margin-bottom:2px;}
+  a.del,a.red,a.yel,a.gre,a.blu,a.pur{overflow:hidden;line-height:18px;border:1px solid #000;border-color:#000;display:inline-block;width:18px;height:18px;background:#000;color:#000;float:left;text-align:center;cursor:default;}
+  /*无图版样式*/
+  a.red{background:#D72F31;color:#a50F31;}
+  a.yel{background:#E2E369;color:#b0c369;}
+  a.gre{background:#3DC133;color:#0ba133;}
+  a.blu{background:#4582D2;color:#1362D2;}
+  a.pur{background:#D147C5;color:#a027C5;}
+  /**//*有图版样式
+  a.red{background:url(xmxx_img/red.gif);}
+  a.yel{background:url(xmxx_img/yel.gif);}
+  a.gre{background:url(xmxx_img/gre.gif);}
+  a.blu{background:url(xmxx_img/blu.gif);}
+  a.pur{background:url(xmxx_img/pur.gif);}
+  */
+  #show{padding:5px;margin:0;width:200px;height:200px;}
+    </style>
+
+</head>
+
+<body>
