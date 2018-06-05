@@ -50,3 +50,39 @@
     var xxnum=new Array(0,0,0,0,0);
     var xxsx=new Array();
     var aa;
+    function $id(id){return document.getElementById(id);}
+
+    function init(lvl){
+      xx=mysort();
+      //$id("test").innerHTML=xx.join(",");
+      getNum();
+      $id("test").innerHTML+=xxnum.join(",")+"<br>红,黄,青,绿,紫<br>";
+      
+      var xxnum1=xxnum.concat();
+      xxnum1.sort();
+      for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+          if(xxnum1[i]==xxnum[j]&&!inArray(j,xxsx,false)){xxsx[xxsx.length]=j;}
+        }
+      }
+      $id("test").innerHTML+=xxnum1.join(",")+"<br>"+xxsx.join(",")+"<br>";
+      showxx();
+      if(lvl>=val.length){v=parseInt($id("lvlRecord").value)+4000;}else{v=val[lvl];}  
+      $id("lvlRecord").value=v;
+      $id("level").value=lvl;
+      if(lvl==1){
+      $id("nowRecord").value=0;
+      }
+    }
+
+    function getNum(){
+      for(i=0;i<m*n;i++){xxnum[xx[i]]++;}
+    }
+
+    var sign=null;
+    var cnxt=false;
+    function autodo(){
+      cnxt=true;
+      sign=setInterval("autodo_()",1);
+     // cnxt=false;
+    }
