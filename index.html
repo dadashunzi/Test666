@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-//CSS  
+ 
     <style >
     body{padding:0;margin:0;font-size:12px;font-weight:700;}
-  input{border:0;background:#002DBF;color:#fff;font-weight:700;font-family:"黑体";fason:expression(this.readOnly=true)}
+  input{border:0;background:#002DBF;color:#fff;font-weight:700;font-family:"榛戜綋";fason:expression(this.readOnly=true)}
   .box{color:#fff;background:#333;padding:5px;width:210px;height:270px;border:1px solid #ccc;margin:0 auto;margin-top:10px;text-align:center;}
   .box div{margin-bottom:2px;}
   a.del,a.red,a.yel,a.gre,a.blu,a.pur{overflow:hidden;line-height:18px;border:1px solid #000;border-color:#000;display:inline-block;width:18px;height:18px;background:#000;color:#000;float:left;text-align:center;cursor:default;}
-  /*无图版样式*/
+  /*脦脼脥录掳忙脩霉脢陆*/
   a.red{background:#D72F31;color:#a50F31;}
   a.yel{background:#E2E369;color:#b0c369;}
   a.gre{background:#3DC133;color:#0ba133;}
   a.blu{background:#4582D2;color:#1362D2;}
   a.pur{background:#D147C5;color:#a027C5;}
-  /**//*有图版样式
+  /**//*脫脨脥录掳忙脩霉脢陆
   a.red{background:url(xmxx_img/red.gif);}
   a.yel{background:url(xmxx_img/yel.gif);}
   a.gre{background:url(xmxx_img/gre.gif);}
@@ -30,12 +30,23 @@
 
 <body>
 
-//HTML 
+
     <div class="box">
-  <div>高分:<input type="text" id="maxRecord" value="0" size=5 /> 分数:<input type="text" id="nowRecord" value="0" size=5 /></div>
-  <div>目标:<input type="text" id="lvlRecord" value="1000" size=5 /> 关卡:<input type="text" id="level" value="1" size=5 /></div>
+  <div>楂樺垎:<input type="text" id="maxRecord" value="0" size=5 /> 鍒嗘暟:<input type="text" id="nowRecord" value="0" size=5 /></div>
+  <div>鐩爣:<input type="text" id="lvlRecord" value="1000" size=5 /> 鍏冲崱:<input type="text" id="level" value="1" size=5 /></div>
   <div><input type="text" id="info" value="" size=20 style="background:none;text-align:center;"/></div>
   <div id="show"></div>
 </div>
-<div align=center><input type="button" onclick="autodo()" value="自动查找"></div>
+<div align=center><input type="button" onclick="autodo()" value="鑷姩鏌ユ壘"></div>
 <div id="test"></div>
+
+
+<script >
+    var xx=new Array();
+    var col=["red","yel","gre","blu","pur","del"];
+    var val=[0,1000,3000,6000,8000,10000,13000,15000,17000,20000];
+    var m=n=10,aSc=5,btn=0;
+    var sel=new Array();//褰撳墠閫変腑
+    var xxnum=new Array(0,0,0,0,0);
+    var xxsx=new Array();
+    var aa;
