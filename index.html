@@ -86,3 +86,55 @@
       sign=setInterval("autodo_()",1);
      // cnxt=false;
     }
+    function autodo_(){
+      if(!cnxt){return;}
+      cnxt=false;
+      var astr=all4();
+      if(astr=="|"||astr==''){clearInterval(sign);sign=null;return;}
+      $id("test").innerHTML+=astr+"<br>";
+      strArr=astr.split("|");
+      for(var ii=1;ii<strArr.length-1;ii++){//有15个以上的,直接先消除
+        tmp=strArr[ii].split(",");
+        if(tmp.length>=15){
+        var id=parseInt(tmp[0]);
+        lClk(id);lClk(id);
+        }
+      }
+      for(var jj=0;jj<5;jj++){
+      k=0;
+      aax=xxsx[jj];
+      //alert("jj="+jj);
+      for(var ii=1;ii<strArr.length-1;ii++){
+        var id=parseInt(strArr[ii].split(",")[0]);
+        if(xx[id]==aax){
+          //alert(id+" "+xx[id]+" "+aax);
+          k=1;lClk(id);lClk(id);break;
+        }
+      }
+      if(k==1)break;
+      }
+      cnxt=true;
+    }
+
+    function showxx(){
+      var str="";
+      for(i=0;i<m*n;i++)str+="<a class='"+col[xx[i]]+"' id='a"+i+"'>★</a>";//★
+      $id("show").innerHTML=str;
+      myclick();
+    }
+
+    window.onload=function(){init(1);}
+
+    function mysort(){
+      var original = new Array; //原始数组 
+      var original1 = new Array;
+      for(var i=0;i<m;i++){for(var j=0;j<n;j++){original[i*n+j] = i % 5;}}
+      original.sort(function(){return(0.5 - Math.random());});//这句是关键 随机打乱数据序号
+      str="";
+      for(var j=0;j<m*n;j++){//再随机取出所有星星
+        var t=Math.round(Math.random() * (m*n-1));
+        original1[j] = original[t];
+      }
+      return(original1);
+    }
+
